@@ -1,52 +1,97 @@
 # Wish Group Resources – Company Website
 
-A company website developed during my IT internship at **Wish Group Resources (WGR)**. The project focuses on building a web presence for the company and presenting its information, services, and relevant content through a user-friendly interface.
+A company website developed during my IT internship at **Wish Group Resources (WGR)**. The project was built using HTML, CSS, JavaScript, and PHP, with additional backend functionality for contact submissions, CV applications, and administrative management.
 
 ## 🌐 Project Overview
 
-The Wish Group Resources website is a web development project created to provide visitors with information about the company through a responsive and accessible website.
+The WGR Company Website is designed to establish an online presence for Wish Group Resources by providing visitors with company information, services, and contact details.
 
-This project provided hands-on experience in frontend and backend web development, website design, and implementing website functionality.
+In addition to the public-facing website, the project includes an administrative management system that allows authorized administrators to manage submitted enquiries and CV applications.
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Website structure and content
-- **CSS3** – Styling and layout design
-- **JavaScript** – Frontend interactions and functionality
-- **PHP** – Server-side development
+| Technology | Purpose |
+|---|---|
+| HTML5 | Website structure and content |
+| CSS3 | Styling and responsive layouts |
+| JavaScript | Frontend interactions and functionality |
+| PHP | Server-side processing and backend functionality |
+| JSON | Multilingual content management |
+| PHPMailer | Email functionality |
+| MySQL / Database | To be confirmed based on database configuration |
 
-## ✨ Features
+## ✨ Key Features
 
-- Company information and content presentation
-- Website navigation
-- Responsive user interface
-- Interactive website elements
+### Public Website
+- **Responsive Design** – Adapts the website layout to different screen sizes and devices.
+- **Navigation System** – Provides intuitive navigation across website sections.
+- **Multilingual Support** – Supports English and Chinese languages.
+- **Contact Form** – Allows visitors to submit enquiries.
+- **CV Submission** – Allows applicants to submit their CV through the website.
 
-*Additional features will be documented based on the actual implementation.*
+### Admin Management System
+- **Admin Authentication** – Administrator login and registration.
+- **Admin Dashboard** – Centralized interface for administrative management.
+- **Password Management** – Change password and password recovery functionality.
+- **Contact Management** – Access and download submitted contact enquiries.
+- **CV Management** – Access and download submitted CV applications.
+- **Admin Account Management** – Manage administrator accounts.
+
+### Email Integration
+- PHPMailer integration for email-related functionality.
+- Server-side PHP processing for website form submissions.
 
 ## 📂 Project Structure
 
 ```text
 wgr-website/
 │
-├── css/                # Stylesheets
-├── js/                 # JavaScript files
-├── images/             # Website images and assets
-├── php/                # Backend PHP files
-├── index.php           # Main website entry point
-└── README.md           # Project documentation
+├── admin/                      # Admin management system
+│   ├── dashboard.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── register_admin.php
+│   ├── change_password.php
+│   ├── forgot_password.php
+│   ├── reset_password.php
+│   ├── reset_admin_password.php
+│   ├── delete_admin.php
+│   ├── download_contacts.php
+│   ├── download_cvs.php
+│   ├── db.php
+│   ├── login.css
+│   └── styles.css
+│
+├── images/                     # Website images and visual assets
+│
+├── lang/                       # Language configuration
+│   ├── en.json
+│   └── zh.json
+│
+├── PHPMailer/                  # Email integration library
+│
+├── uploads/                    # Uploaded CV documents (excluded from Git)
+│
+├── videos/                     # Website video assets
+│
+├── db.php                      # Database configuration
+├── index.html                  # Main website page
+├── index.css                   # Main stylesheet
+├── index.js                    # Frontend JavaScript
+├── submit_contact.php          # Contact form processing
+├── submit_cv.php               # CV submission processing
+│
+└── README.md
 ```
-
-*Folder structure is illustrative and should be updated to match the actual project.*
 
 ## ⚙️ Installation and Setup
 
 ### Prerequisites
 
 - PHP
-- XAMPP or another local PHP development environment
+- Apache server (XAMPP recommended)
 - Web browser
-- Code editor (Visual Studio Code recommended)
+- Visual Studio Code or another code editor
 
 ### Getting Started
 
@@ -58,9 +103,13 @@ wgr-website/
 
 2. Move the project folder into the XAMPP `htdocs` directory.
 
-3. Start Apache through the XAMPP Control Panel.
+3. Start Apache using the XAMPP Control Panel.
 
-4. Open your browser and navigate to:
+4. Configure the necessary PHP settings and database connection if required.
+
+5. Configure PHPMailer and email credentials if email functionality is enabled.
+
+6. Open your browser and navigate to:
 
    ```text
    http://localhost/wgr-website/
@@ -70,13 +119,15 @@ wgr-website/
 
 Developed during my IT internship at Wish Group Resources.
 
-Through this project, I gained practical experience in:
+Throughout this project, I gained practical experience in:
 
-- Building and structuring websites using HTML and CSS.
-- Implementing interactive features using JavaScript.
-- Developing server-side functionality using PHP.
-- Understanding website development workflows.
-- Applying frontend and backend development concepts to a practical project.
+- Developing responsive company websites using HTML, CSS, and JavaScript.
+- Implementing backend functionality using PHP.
+- Developing administrative interfaces and authentication functionality.
+- Handling contact form submissions and CV uploads.
+- Integrating email functionality using PHPMailer.
+- Implementing multilingual website content using JSON.
+- Organizing and maintaining a full-stack web development project.
 
 ## 👨‍💻 Author
 
