@@ -1,75 +1,82 @@
-# WGR To-Do List Application
+# Wish Group Resources – Company Website
 
-A web-based To-Do List Application developed during my IT internship at **Wish Group Resources (WGR)**. The application was designed to help users manage and track their daily tasks through a centralized web interface.
+A company website developed during my IT internship at **Wish Group Resources (WGR)**. The project focuses on building a web presence for the company and presenting its information, services, and relevant content through a user-friendly interface.
 
-## 📌 Project Overview
+## 🌐 Project Overview
 
-The WGR To-Do List Application is a web development project that focuses on providing a simple and accessible way to organize and manage daily tasks.
+The Wish Group Resources website is a web development project created to provide visitors with information about the company through a responsive and accessible website.
 
-This project was developed as part of my internship experience, where I gained practical exposure to web development, application functionality, and working on a project based on organizational requirements.
+This project provided hands-on experience in frontend and backend web development, website design, and implementing website functionality.
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Web page structure
-- **CSS3** – Styling and user interface design
-- **JavaScript** – Frontend functionality and interactions
+- **HTML5** – Website structure and content
+- **CSS3** – Styling and layout design
+- **JavaScript** – Frontend interactions and functionality
 - **PHP** – Server-side development
 
 ## ✨ Features
 
-- Task management functionality
-- Web-based user interface
-- Task tracking and organization
+- Company information and content presentation
+- Website navigation
+- Responsive user interface
+- Interactive website elements
 
-*Note: Update this section with the exact implemented features.*
+*Additional features will be documented based on the actual implementation.*
 
 ## 📂 Project Structure
 
 ```text
-WGR-To-Do-List/
+wgr-website/
 │
 ├── css/                # Stylesheets
 ├── js/                 # JavaScript files
-├── images/             # Images and other visual assets
-├── php/                # PHP backend files
-├── index.php           # Main application entry point
+├── images/             # Website images and assets
+├── php/                # Backend PHP files
+├── index.php           # Main website entry point
 └── README.md           # Project documentation
 ```
 
-*The folder structure above is illustrative. Adjust it to match the actual project.*
+*Folder structure is illustrative and should be updated to match the actual project.*
 
 ## ⚙️ Installation and Setup
 
-To run this project locally:
+### Prerequisites
+
+- PHP
+- XAMPP or another local PHP development environment
+- Web browser
+- Code editor (Visual Studio Code recommended)
+
+### Getting Started
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Lowshaoxuan/Intern_Project-Wish-Group-Resource-To-Do-List-App-.git
+   git clone YOUR_REPOSITORY_URL
    ```
 
-2. Move the project folder into your local PHP server directory (for example, `htdocs` in XAMPP).
+2. Move the project folder into the XAMPP `htdocs` directory.
 
-3. Start Apache and any required database services through XAMPP.
+3. Start Apache through the XAMPP Control Panel.
 
-4. Configure the database connection if the application requires one.
-
-5. Open your browser and navigate to:
+4. Open your browser and navigate to:
 
    ```text
-   http://localhost/Intern_Project-Wish-Group-Resource-To-Do-List-App-/
+   http://localhost/wgr-website/
    ```
 
 ## 🎓 Internship Experience
 
-This project was developed during my internship at Wish Group Resources.
+Developed during my IT internship at Wish Group Resources.
 
 Through this project, I gained practical experience in:
 
-- Developing web applications using frontend and backend technologies.
-- Implementing application functionality using PHP and JavaScript.
-- Working with website structure, styling, and user interactions.
-- Understanding the development process of an application based on organizational requirements.
+- Building and structuring websites using HTML and CSS.
+- Implementing interactive features using JavaScript.
+- Developing server-side functionality using PHP.
+- Understanding website development workflows.
+- Applying frontend and backend development concepts to a practical project.
 
 ## 👨‍💻 Author
 
