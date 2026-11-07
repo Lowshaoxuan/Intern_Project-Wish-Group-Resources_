@@ -1,0 +1,146 @@
+{
+  "page_title": "Wish Group",
+  "nav_about": "关于我们",
+  "nav_services": "服务",
+  "nav_join": "加入我们",
+  "nav_events": "活动",
+  "nav_contact": "联系我们",
+  "hero": {
+    "title": "你的全方位财务伙伴",
+    "subtitle": "智慧一站式，投资与保障全包办",
+    "getStarted": "立即开始"
+  },
+  "about": {
+    "title": "关于我们",
+    "intro_text": "Wish Group Resources 自 2013 年成立，拥有 20 年以上经验，已帮助数千客户安心投资、守护财富、顺利传承，成为值得信赖的一站式财务伙伴。",
+    "mission_title": "我们的使命",
+    "mission_text": "通过全面、个性化的财务和保险规划提供安心，与客户建立长期信任，并秉持最高水平的专业精神和道德标准。",
+    "vision_title": "我们的愿景",
+    "vision_text": "成为马来西亚领先的年轻金融服务机构——客户和商业领袖的首选合作伙伴。我们培养领导者，而非员工。",
+    "values_title": "我们的核心价值观",
+    "value1": "感恩",
+    "value2": "团队精神",
+    "value3": "卓越",
+    "value4": "远见",
+    "value5": "奉献"
+  },
+  "stories": {
+    "title": "客户成功案例",
+    "story1_title": "帮助李先生提前退休",
+    "story1": {
+        "text": "<h3>帮助李先生提前退休</h3><p>45岁的李先生找到我们，希望能55岁前退休。通过战略性投资和财务规划，我们帮助他实现了无债一身轻的提前退休，并获得了稳定的被动收入。</p>"
+      },
+    "story2_title": "挽救一个家庭的投资计划",
+    "story2": {
+        "text": "<h3>挽救一个家庭的投资计划</h3><p>这个家庭曾陷入高风险投资陷阱。我们的顾问帮助他们退出并重组了投资组合，带来了稳定的增长和财务上的安心。</p>"
+      },
+    "story3_title": "为孩子建立安全的未来",
+    "story3": {
+        "text": "<h3>为孩子建立安全的未来</h3><p>我们帮助这对年轻夫妇建立了一项长期的储蓄和保障计划，确保他们的孩子即使在经济不确定的情况下，也能获得教育和医疗保障。</p>"
+      },
+    "know_more": "了解更多"
+    },
+  "story_popup": {
+      "video_unsupported": "您的浏览器不支持此视频标签。",
+      "speed_label": "速度:"
+  },
+  "services": {
+    "title": "我们的服务",
+    "banking": {
+      "title": "银行规划",
+      "item1": "贷款咨询",
+      "item2": "房贷规划",
+      "item3": "债务重组"
+    },
+    "risk": {
+      "title": "风险管理",
+      "item1": "保险分析",
+      "item2": "保障规划",
+      "item3": "疾病保障"
+    },
+    "legal": {
+      "title": "法律咨询（与信任的合作伙伴）",
+      "item1": "法律文件支持",
+      "item2": "合同审查",
+      "item3": "遗嘱服务"
+    },
+    "tax": {
+      "title": "税务规划",
+      "item1": "个人税务规划",
+      "item2": "企业税务咨询",
+      "item3": "税务优化"
+    },
+    "investment": {
+      "title": "投资规划",
+      "item1": "投资组合分析",
+      "item2": "单位信托投资",
+      "item3": "退休规划"
+    },
+    "estate": {
+      "title": "遗产规划",
+      "item1": "遗嘱规划与信托设立",
+      "item2": "资产分配",
+      "item3": "继承保障"
+    }
+  },
+  "join": {
+    "title": "加入我们",
+    "intro_text": "<strong>弹性工作时间。收入掌握在您手中。</strong><br />加入我们的“财富匠人”团队——学习税务、金融、风险、财富和遗产规划的基本路径。",
+    "how_we_help_title": "我们如何提供帮助",
+    "story4_title": "指导年轻顾问",
+    "story5_title": "妈妈们的财务自由",
+    "story6_title": "退休人员的第二职业",
+    "apply_title": "立即加入我们",
+    "apply_description": "我们正在寻找像您一样充满热情的人士！"
+  },
+  "form": {
+    "name_placeholder": "您的姓名",
+    "email_placeholder": "您的电子邮件",
+    "phone_placeholder": "电话号码",
+    "message_placeholder_cv": "给我们的任何留言",
+    "cv_label": "在此附上您的简历",
+    "choose_file_btn": "选择文件",
+    "no_file_chosen": "未选择文件",
+    "remove_file_title": "移除文件",
+    "submit_btn": "提交",
+    "message_placeholder_contact": "可选留言"
+  },
+  "events": {
+    "title": "我们的活动",
+    "tab_team": "团队建设",
+    "tab_training": "培训",
+    "tab_celebration": "庆祝",
+    "team_desc1": "户外团队建设活动。",
+    "team_desc2": "有趣的协作游戏。",
+    "training_desc1": "领导力研讨会和财务培训。",
+    "celebration_desc1": "公司年度晚宴和派对。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "留下您的详细信息，我们会与您联系！",
+    "form_title": "取得联系",
+    "category_label": "感兴趣的类别",
+    "category_option1": "银行解决方案",
+    "category_option2": "风险管理",
+    "category_option3": "法律咨询",
+    "category_option4": "税务规划",
+    "category_option5": "投资规划",
+    "category_option6": "遗产规划",
+    "category_option_other": "其他",
+    "other_category_placeholder": "请注明"
+  },
+  "footer": {
+    "find_us_title": "找到我们",
+    "address_label": "地址:",
+    "address_line1": "32A-1, Jalan Nautika B U20/B,",
+    "address_line2": "Pusat Komersial TSB,",
+    "address_line3": "47000 Shah Alam, Selangor",
+    "Maps_title": "在Google地图中打开",
+    "waze_title": "在Waze中打开",
+    "facebook_title": "Facebook",
+    "rednote_title": "小红书",
+    "email_label": "电子邮件:",
+    "phone_label": "电话:",
+    "copyright": "© 2025 Wish Group. 版权所有。"
+  }
+}

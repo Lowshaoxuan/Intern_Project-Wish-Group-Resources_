@@ -1,0 +1,360 @@
+/* General Body and Container Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Header Styling */
+header {
+  background-color: #0056b3; /* A vibrant blue for the header */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.logout-btn {
+  background-color: #dc3545; /* Red for logout */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Section Styling */
+section {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #007bff; /* Accent border for sections */
+}
+
+section h2 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+/* Form Styling */
+.admin-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="email"],
+.admin-form input[type="password"],
+.admin-form input[type="date"],
+.admin-form select {
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 200px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.admin-form button,
+.reset-btn {
+  background-color: #28a745; /* Green for primary actions */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.admin-form button:hover,
+.reset-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.admin-form button.danger {
+  background-color: #dc3545; /* Red for danger actions */
+}
+
+.admin-form button.danger:hover {
+  background-color: #c82333;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+table thead {
+  background-color: #007bff; /* Blue for table headers */
+  color: #fff;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light grey for even rows */
+}
+
+table tbody tr:hover {
+  background-color: #e2f2ff; /* Light blue on hover */
+}
+
+table td a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+table td a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Notice and Warning Messages */
+.notice {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+}
+
+.notice.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.notice {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notice strong {
+  margin-right: 5px;
+}
+
+/* Search Input for CVs */
+#cvSearch {
+  width: calc(100% - 24px); /* Adjusting for padding */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+/* Loading Message */
+#loadingMsg {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Filter Form Specifics */
+#filterForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#filterForm label {
+  font-weight: bold;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#filterForm input[type="date"],
+#filterForm select {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+#filterForm button[type="submit"] {
+  background-color: #17a2b8; /* Info blue for download button */
+  padding: 10px 20px;
+}
+
+#filterForm button[type="submit"]:hover {
+  background-color: #138496;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .admin-form,
+  #filterForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-form input,
+  .admin-form button,
+  #filterForm input,
+  #filterForm select,
+  #filterForm button,
+  .reset-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, or the table won't be accessible) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  table tr {
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  table td:before {
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color: #0056b3;
+  }
+
+  /* Label the data */
+  table td:nth-of-type(1):before {
+    content: "Select";
+  }
+  table td:nth-of-type(2):before {
+    content: "Name";
+  }
+  table td:nth-of-type(3):before {
+    content: "Email";
+  }
+  table td:nth-of-type(4):before {
+    content: "Phone";
+  }
+  table td:nth-of-type(5):before {
+    content: "Message";
+  }
+  table td:nth-of-type(6):before {
+    content: "CV";
+  }
+  table td:nth-of-type(7):before {
+    content: "Uploaded";
+  }
+  table td:nth-of-type(8):before {
+    content: "Category";
+  } /* For contact list */
+  table td:nth-of-type(9):before {
+    content: "Time";
+  } /* For contact list */
+  table td:nth-of-type(10):before {
+    content: "Actions";
+  } /* For admin manage accounts */
+
+  /* Adjust padding for labels for better alignment on small screens */
+  table td:first-child {
+    padding-top: 15px;
+  }
+  table td:last-child {
+    padding-bottom: 15px;
+    border-bottom: none;
+  }
+}

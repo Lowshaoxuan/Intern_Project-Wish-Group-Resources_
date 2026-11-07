@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="page_title">Wish Group</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script defer src="index.js"></script>
+  </head>
+
+  <body id="top">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#top">
+            <img src="images/logo.png" alt="Wish Group Logo" />
+          </a>
+        </div>
+
+        <nav class="nav mobile-hidden">
+          <ul>
+            <li>
+              <a href="#about" class="nav-link" data-i18n="nav_about"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="nav-link" data-i18n="nav_services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-i18n="nav_contact"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="#events" class="nav-link" data-i18n="nav_events"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a href="#join" class="nav-link" data-i18n="nav_join">Join Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="lang-dropdown mobile-middle">
+          <button class="lang-toggle">
+            <div class="lang-box">
+              <img src="images/language.png" alt="Language Icon" />
+              <span id="current-lang-text">EN</span>
+              <i class="fa fa-caret-down"></i>
+            </div>
+          </button>
+          <ul class="lang-menu">
+            <li data-lang="en">EN</li>
+            <li data-lang="zh">ZH</li>
+          </ul>
+        </div>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </a>
+
+    <section id="hero" class="hero-banner">
+      <div class="slideshow-container">
+        <div class="mySlide fade">
+          <img src="images/1.png" class="slide-img" />
+        </div>
+
+        <div class="mySlide fade">
+          <img src="images/2.png" class="slide-img desktop-img" />
+          <img src="images/2mobile.png" class="slide-img mobile-img" />
+        </div>
+
+        <div class="mySlide fade">
+          <img src="images/3.png" class="slide-img" />
+        </div>
+
+        <div class="slide-overlay">
+          <h1 data-i18n="hero.title">Your One-Stop Financial Partner</h1>
+          <p data-i18n="hero.subtitle">
+            All-in-one solution for growth and protection under one roof
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn primary" data-i18n="hero.getStarted"
+              >Get Started</a
+            >
+            <a
+              href="https://wa.me/yourwhatsapplink"
+              target="_blank"
+              class="btn whatsapp-btn"
+              aria-label="Chat on WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-btn"><span></span></a>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-intro">
+          <h2 data-i18n="about.title">About Us</h2>
+          <p data-i18n="about.intro_text">
+            Founded in 2013, <strong>Wish Group Resources</strong> combines over
+            20 years of expertise and has helped thousands of clients invest
+            with confidence, protect their wealth, and pass it on smoothly — all
+            with one trusted partner.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="card">
+            <h3 data-i18n="about.mission_title">Our Mission</h3>
+            <p data-i18n="about.mission_text">
+              To provide peace of mind through comprehensive, personalized
+              financial and insurance planning, build long-term trust with
+              clients, and uphold the highest levels of professionalism and
+              ethical standards.
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="about.vision_title">Our Vision</h3>
+            <p data-i18n="about.vision_text">
+              To be a leading young financial services agency in Malaysia — the
+              preferred partner for both clients and business leaders. We train
+              leaders, not staff.
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="about.values_title">Our Core Values</h3>
+            <ul>
+              <li data-i18n="about.value1">Gratefulness</li>
+              <li data-i18n="about.value2">Team Spirit</li>
+              <li data-i18n="about.value3">Excellence</li>
+              <li data-i18n="about.value4">Foresight</li>
+              <li data-i18n="about.value5">Dedication</li>
+            </ul>
+          </div>
+        </div>
+
+        <section id="stories" class="story-section">
+          <div class="container">
+            <h2 class="section-title" data-i18n="stories.title">
+              Client Success Stories
+            </h2>
+            <div class="story-cards">
+              <div class="story-card" data-story="1">
+                <img src="images/event.jpg" alt="Story 1 Thumbnail" />
+                <h4 data-i18n="stories.story1_title">
+                  Helping Mr. Lee Retire Early
+                </h4>
+                <button class="know-more-btn" data-i18n="stories.know_more">
+                  Know More
+                </button>
+              </div>
+              <div class="story-card" data-story="2">
+                <img src="images/event.jpg" alt="Story 2 Thumbnail" />
+                <h4 data-i18n="stories.story2_title">
+                  Rescuing a Family’s Investment Plan
+                </h4>
+                <button class="know-more-btn" data-i18n="stories.know_more">
+                  Know More
+                </button>
+              </div>
+              <div class="story-card" data-story="3">
+                <img src="images/event.jpg" alt="Story 3 Thumbnail" />
+                <h4 data-i18n="stories.story3_title">
+                  Building a Safe Future for Kids
+                </h4>
+                <button class="know-more-btn" data-i18n="stories.know_more">
+                  Know More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-popup" id="storyPopup">
+            <div class="story-popup-content">
+              <button class="close-btn" id="closeStory">×</button>
+              <div class="video-area">
+                <video
+                  id="storyVideo"
+                  controls
+                  poster="images/story1-thumb.jpg"
+                >
+                  <source src="" type="video/mp4" />
+                  <p data-i18n="story_popup.video_unsupported">
+                    Your browser does not support the video tag.
+                  </p>
+                </video>
+                <div class="video-speed">
+                  <label for="speed" data-i18n="story_popup.speed_label"
+                    >Speed:</label
+                  >
+                  <select id="speed">
+                    <option value="1">1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                  </select>
+                </div>
+              </div>
+              <div class="story-text" id="storyText"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/banking.jpeg')"
+          >
+            <h3 data-i18n="services.banking.title">Banking & Finance</h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.banking.item1">Loan consultation</li>
+              <li data-i18n="services.banking.item2">Mortgage planning</li>
+              <li data-i18n="services.banking.item3">Debt restructuring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/risk.jpeg')"
+          >
+            <h3 data-i18n="services.risk.title">Risk Management</h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.risk.item1">Insurance analysis</li>
+              <li data-i18n="services.risk.item2">Protection planning</li>
+              <li data-i18n="services.risk.item3">Critical illness coverage</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/legal.png')"
+          >
+            <h3 data-i18n="services.legal.title">
+              Legal Advisory(via trusted partners)
+            </h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.legal.item1">
+                Legal documentation support
+              </li>
+              <li data-i18n="services.legal.item2">Contract review</li>
+              <li data-i18n="services.legal.item3">Will writing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/tax.jpg')"
+          >
+            <h3 data-i18n="services.tax.title">Tax Planning</h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.tax.item1">Personal tax planning</li>
+              <li data-i18n="services.tax.item2">Business tax consultation</li>
+              <li data-i18n="services.tax.item3">Tax optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/investment.jpg')"
+          >
+            <h3 data-i18n="services.investment.title">Investment Planning</h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.investment.item1">Portfolio design</li>
+              <li data-i18n="services.investment.item2">
+                Unit trust investment
+              </li>
+              <li data-i18n="services.investment.item3">Retirement planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/estate.jpeg')"
+          >
+            <h3 data-i18n="services.estate.title">Estate Planning</h3>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li data-i18n="services.estate.item1">
+                Will planning & trust setup
+              </li>
+              <li data-i18n="services.estate.item2">Asset distribution</li>
+              <li data-i18n="services.estate.item3">Inheritance protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-us-section">
+      <div class="container">
+        <h2 class="join-title" data-i18n="contact.title">Contact Us</h2>
+        <p class="join-description" data-i18n="contact.description">
+          Leave us your details and we'll be in touch!
+        </p>
+
+        <div class="contact-layout">
+          <div class="contact-form-area">
+            <h3 class="section-subtitle" data-i18n="contact.form_title">
+              Get In Touch
+            </h3>
+            <form class="cv-form" id="contactForm">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                data-i18n-placeholder="form.name_placeholder"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                data-i18n-placeholder="form.email_placeholder"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                data-i18n-placeholder="form.phone_placeholder"
+              />
+
+              <label
+                for="category"
+                class="file-label"
+                data-i18n="contact.category_label"
+                >Interested Category</label
+              >
+              <div class="category-group">
+                <select name="category" id="category" required>
+                  <option data-i18n="contact.category_option1">
+                    Banking Solutions
+                  </option>
+                  <option data-i18n="contact.category_option2">
+                    Risk Management
+                  </option>
+                  <option data-i18n="contact.category_option3">
+                    Legal Advisory
+                  </option>
+                  <option data-i18n="contact.category_option4">
+                    Tax Planning
+                  </option>
+                  <option data-i18n="contact.category_option5">
+                    Investment Planning
+                  </option>
+                  <option data-i18n="contact.category_option6">
+                    Estate Planning
+                  </option>
+                  <option
+                    value="other"
+                    data-i18n="contact.category_option_other"
+                  >
+                    Other
+                  </option>
+                </select>
+                <input
+                  type="text"
+                  name="other_category"
+                  id="otherCategoryInput"
+                  placeholder="Please specify"
+                  maxlength="50"
+                  style="display: none"
+                  data-i18n-placeholder="contact.other_category_placeholder"
+                />
+              </div>
+
+              <textarea
+                name="message"
+                placeholder="Optional Message"
+                maxlength="250"
+                data-i18n-placeholder="form.message_placeholder_contact"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="submit-btn"
+                data-i18n="form.submit_btn"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-image">
+            <img src="images/contact.jpg" alt="Contact Us" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="event-section container">
+      <h2 class="event-heading" data-i18n="events.title">Our Events</h2>
+      <div class="event-tabs">
+        <button
+          class="event-tab active"
+          data-category="team"
+          data-i18n="events.tab_team"
+        >
+          Team Building
+        </button>
+        <button
+          class="event-tab"
+          data-category="training"
+          data-i18n="events.tab_training"
+        >
+          Training
+        </button>
+        <button
+          class="event-tab"
+          data-category="celebration"
+          data-i18n="events.tab_celebration"
+        >
+          Celebration
+        </button>
+      </div>
+
+      <div class="event-gallery">
+        <div
+          class="event-item"
+          data-category="team"
+          data-description="Outdoor team bonding activities."
+          data-i18n-description="events.team_desc1"
+        >
+          <img src="images/event.jpg" alt="Team 1" />
+        </div>
+        <div
+          class="event-item"
+          data-category="team"
+          data-description="Fun collaboration with games."
+          data-i18n-description="events.team_desc2"
+        >
+          <img src="images/event.jpg" alt="Team 2" />
+        </div>
+        <div
+          class="event-item"
+          data-category="training"
+          data-description="Leadership workshop and finance training."
+          data-i18n-description="events.training_desc1"
+        >
+          <img src="images/event.jpg" alt="Training 1" />
+        </div>
+        <div
+          class="event-item"
+          data-category="celebration"
+          data-description="Company's annual dinner and party."
+          data-i18n-description="events.celebration_desc1"
+        >
+          <img src="images/event.jpg" alt="Celebration 1" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="modal">
+      <span class="modal-close" id="modalClose">×</span
+      ><img class="modal-img" id="modalImg" src="" alt="Zoomed" />
+      <p class="modal-desc" id="modalDesc"></p>
+      <a class="modal-prev" id="modalPrev">❮</a>
+      <a class="modal-next" id="modalNext">❯</a>
+    </div>
+
+    <section id="join" class="join-us-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="join.title">Join Us</h2>
+        <p class="intro-text" data-i18n="join.intro_text">
+          <strong>Flexible work hours. Income in your hands.</strong><br />
+          Join our team as a “Wealth Artisan” — learn the essential paths of
+          tax, finance, risk, wealth and estate planning.
+        </p>
+
+        <h3 class="section-subtitle" data-i18n="join.how_we_help_title">
+          How We Help
+        </h3>
+        <div class="story-cards">
+          <div class="story-card" data-story="4">
+            <img src="images/investment.jpg" alt="Help Story 1" />
+            <h4 data-i18n="join.story4_title">Guiding Young Advisors</h4>
+            <button class="know-more-btn" data-i18n="stories.know_more">
+              Know More
+            </button>
+          </div>
+          <div class="story-card" data-story="5">
+            <img src="images/tax.jpg" alt="Help Story 2" />
+            <h4 data-i18n="join.story5_title">Financial Freedom for Moms</h4>
+            <button class="know-more-btn" data-i18n="stories.know_more">
+              Know More
+            </button>
+          </div>
+          <div class="story-card" data-story="6">
+            <img src="images/legal.png" alt="Help Story 3" />
+            <h4 data-i18n="join.story6_title">Second Career for Retirees</h4>
+            <button class="know-more-btn" data-i18n="stories.know_more">
+              Know More
+            </button>
+          </div>
+        </div>
+
+        <section id="join" class="join-us-section">
+          <div class="container">
+            <h2 class="join-title" data-i18n="join.apply_title">Join Us Now</h2>
+            <p class="join-description" data-i18n="join.apply_description">
+              We’re looking for passionate individuals like you!
+            </p>
+
+            <div class="join-layout">
+              <div class="join-image">
+                <img src="images/shake.jpg" alt="Join Us" />
+              </div>
+
+              <div class="join-form-area">
+                <h3 class="section-subtitle" data-i18n="join.form_title">
+                  Send Us Your CV
+                </h3>
+                <form
+                  class="cv-form"
+                  method="POST"
+                  enctype="multipart/form-data"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    data-i18n-placeholder="form.name_placeholder"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    data-i18n-placeholder="form.email_placeholder"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                    data-i18n-placeholder="form.phone_placeholder"
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Any message to our company"
+                    data-i18n-placeholder="form.message_placeholder_cv"
+                  ></textarea>
+
+                  <div class="file-upload-wrapper">
+                    <label class="file-label" data-i18n="form.cv_label"
+                      >Attach your CV here</label
+                    >
+                    <div class="file-input-group">
+                      <input
+                        type="file"
+                        name="cv"
+                        id="cv"
+                        accept=".pdf,.doc,.docx"
+                        required
+                        hidden
+                      />
+                      <button
+                        type="button"
+                        id="chooseFileBtn"
+                        class="choose-file-btn"
+                        data-i18n="form.choose_file_btn"
+                      >
+                        Choose a File
+                      </button>
+                      <span
+                        id="fileName"
+                        class="file-name"
+                        data-i18n="form.no_file_chosen"
+                        >No file chosen</span
+                      >
+                      <button
+                        type="button"
+                        id="removeFileBtn"
+                        class="remove-file-btn"
+                        title="Remove File"
+                        data-i18n-title="form.remove_file_title"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="submit-btn"
+                    data-i18n="form.submit_btn"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3 data-i18n="footer.find_us_title">Find Us On</h3>
+          <p>
+            <strong data-i18n="footer.address_label">Address:</strong><br />
+            <span data-i18n="footer.address_line1"
+              >32A-1, Jalan Nautika B U20/B,</span
+            ><br />
+            <span data-i18n="footer.address_line2">Pusat Komersial TSB,</span
+            ><br />
+            <span data-i18n="footer.address_line3"
+              >47000 Shah Alam, Selangor</span
+            >
+          </p>
+
+          <div class="map-links footer-icons">
+            <a
+              href="https://www.google.com/maps/place/32A-1,+Jalan+Nautika+B+U20%2FB,+Pusat+Komersial+TSB,+47000+Shah+Alam,+Selangor"
+              target="_blank"
+              title="Open in Google Maps"
+              data-i18n-title="footer.Maps_title"
+            >
+              <div class="icon-circle">
+                <img src="images/map.png" alt="Google Maps" />
+              </div>
+            </a>
+            <a
+              href="https://waze.com/ul?ll=3.1928,101.5299"
+              target="_blank"
+              title="Open in Waze"
+              data-i18n-title="footer.waze_title"
+            >
+              <div class="icon-circle">
+                <img src="images/waze.png" alt="Waze" />
+              </div>
+            </a>
+            <a
+              href="https://facebook.com/yourpage"
+              target="_blank"
+              title="Facebook"
+              data-i18n-title="footer.facebook_title"
+            >
+              <div class="icon-circle">
+                <img src="images/facebook.png" alt="Facebook" />
+              </div>
+            </a>
+            <a
+              href="https://rednote.com/youraccount"
+              target="_blank"
+              title="Rednote"
+              data-i18n-title="footer.rednote_title"
+            >
+              <div class="icon-circle">
+                <img src="images/rednote.jpeg" alt="Rednote" />
+              </div>
+            </a>
+          </div>
+
+          <p>
+            <strong data-i18n="footer.email_label">Email:</strong>
+            <a href="mailto:info@wishgroup.com">info@wishgroup.com</a>
+          </p>
+          <p>
+            <strong data-i18n="footer.phone_label">Phone:</strong>
+            <a href="tel:+60123456789">+60 12-345 6789</a>
+          </p>
+        </div>
+
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps?q=32A-1,+Jalan+Nautika+B+U20/B,+Pusat+Komersial+TSB,+47000+Shah+Alam,+Selangor&output=embed"
+            width="100%"
+            height="220"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">
+          © 2025 Wish Group. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

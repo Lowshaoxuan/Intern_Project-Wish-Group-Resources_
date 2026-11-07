@@ -1,0 +1,1750 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Global Font */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== Header ========== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout */
+.header .container {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  flex: 0 0 auto;
+}
+.logo img {
+  height: 55px;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active,
+.nav-link.active {
+  background-color: #e0f0ff;
+  color: #0073e6;
+  font-weight: 600;
+}
+
+/* ===== Language Dropdown ===== */
+.lang-dropdown {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.lang-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #fff;
+  outline: 1px solid #ccc;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-box:hover {
+  outline-color: #999999;
+  background-color: #eaeaea;
+}
+
+.lang-box img {
+  width: 20px;
+  height: 20px;
+}
+
+.lang-box span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.lang-box i {
+  font-size: 12px;
+  color: #333;
+}
+
+.lang-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 5px 0;
+  min-width: 100px;
+  display: none;
+  z-index: 1000;
+}
+
+.lang-menu li {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.lang-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===== Hamburger Button (Mobile Only) ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* ===== Mobile View ===== */
+@media (max-width: 768px) {
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .lang-dropdown {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 0;
+  }
+
+  /* Language box simplified (no icon) */
+  .lang-box img {
+    display: none;
+  }
+
+  .lang-box {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  .lang-box span {
+    font-size: 14px;
+  }
+
+  .lang-menu {
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 3;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a {
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .nav a:hover,
+  .nav a.active,
+  .nav-link.active {
+    background-color: #e0f0ff;
+    color: #0073e6;
+    font-weight: 600;
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #0073e6;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px; /* centers the arrow vertically */
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #005bb5;
+}
+
+/* ============================
+   Slideshow Hero Section
+============================ */
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Dark mask overlay over entire hero section */
+.slideshow-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 2;
+}
+
+/* Slide image */
+.slide-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  opacity: 0.7; /* darken background image */
+}
+
+/* Each slide */
+.mySlide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: fadeEffect 1s ease-in-out;
+}
+
+/* Default: Show desktop version, hide mobile */
+.desktop-img {
+  display: block;
+}
+.mobile-img {
+  display: none;
+}
+
+/* On mobile: Show mobile version, hide desktop */
+@media (max-width: 768px) {
+  .desktop-img {
+    display: none !important;
+  }
+  .mobile-img {
+    display: block !important;
+  }
+}
+
+/* Fade animation */
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Text overlay box (no background now) */
+.slide-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 90%;
+  z-index: 3;
+  background: transparent;
+  color: #fff;
+}
+
+.slide-overlay h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.slide-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Button container */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Button base styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+/* Primary button */
+.btn.primary {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background-color: #005bb5;
+}
+
+/* WhatsApp button */
+.btn.whatsapp-btn {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #63e6be;
+  font-size: 38px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.btn.whatsapp-btn i {
+  color: #63e6be;
+}
+
+/* Dot navigation */
+.dot-container {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #0073e6;
+}
+
+/* Scroll down arrow (style #5) */
+.scroll-down-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  transform: translateX(-50%);
+  text-decoration: none;
+  padding-top: 70px;
+}
+
+.scroll-down-btn span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+/* Arrow animation */
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+/* ===== Responsive Styling for Mobile ===== */
+@media (max-width: 768px) {
+  .slide-overlay {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .slide-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .slide-overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .btn.whatsapp-btn {
+    font-size: 30px;
+  }
+
+  .dot-container {
+    bottom: 60px;
+  }
+
+  .scroll-down-btn {
+    bottom: 8px;
+  }
+
+  .slide-img {
+    object-position: center;
+  }
+}
+
+/* Universal Box Sizing */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensures all elements inherit border-box */
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default paddings */
+}
+
+/* About Us Section */
+.about-section {
+  padding: 100px 5% 80px;
+  background-color: #f9f9f9;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Container styling - critical for desktop and mobile consistency */
+/* This container should typically be the element that has horizontal padding */
+.about-section .container,
+.story-section .container {
+  /* Applying to both for consistency */
+  max-width: 1100px;
+  margin: 0 auto;
+  /* On desktop, 5% padding is applied to the section, so containers fill that */
+  /* For mobile, we'll override this in the media query */
+}
+
+/* Introduction */
+.about-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #222;
+  font-weight: 700;
+  position: relative;
+}
+
+.about-intro h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #999;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission/Vision/Card Grid */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px; /* Padding around the grid on desktop */
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px; /* Padding inside each card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #0073e6;
+  margin-bottom: 12px;
+}
+
+.card p,
+.card ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card ul {
+  list-style: inside disc;
+  padding-left: 0;
+}
+
+/* Story Section Layout */
+.story-section {
+  padding: 100px 5%;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+/* Cards Container */
+.story-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.story-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 400px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.story-card h4 {
+  padding: 15px 10px 10px;
+  font-size: 1.1rem;
+  color: #333;
+  min-height: 50px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Know More Button */
+.know-more-btn {
+  margin: 0 auto 10px;
+  padding: 10px 22px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.know-more-btn:hover {
+  background-color: #005bb5;
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 115, 230, 0.3);
+}
+
+/* Popup viewer */
+.story-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.story-popup-content {
+  background: #fff;
+  width: 95%; /* Overall width of the content box within the popup */
+  max-width: 1300px;
+  height: 90vh;
+  border-radius: 14px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  /* position: relative; Removed this as the close button is now relative to .story-popup */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Video area */
+.video-area {
+  flex: 1.2;
+  min-width: 0; /* Allows content to shrink */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.video-area video {
+  width: 100%; /* Video takes full width of its padded parent */
+  height: auto;
+  border-radius: 10px;
+}
+
+.video-speed {
+  margin-top: 12px;
+}
+
+.video-speed label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.video-speed select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Text side */
+.story-text {
+  flex: 1;
+  min-width: 0; /* Allows content to shrink */
+  padding: 30px 40px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.story-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #0073e6;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Close Button - NOW POSITIONED RELATIVE TO .story-popup */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+  color: #ff5c5c;
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* ===================================== */
+/* ========= Mobile View Fixes ========= */
+/* ===================================== */
+@media (max-width: 768px) {
+  /* Ensure a base padding for the body, if not already set, to prevent content touching edges */
+  body {
+    padding: 0; /* Ensure no default body padding that could conflict */
+    margin: 0; /* Ensure no default body margin that could conflict */
+  }
+
+  /* Main section padding for mobile */
+  .about-section,
+  .story-section {
+    padding: 60px 20px; /* Consistent padding for all main sections */
+    border-radius: 0;
+    width: 100%; /* Ensure sections take full viewport width initially */
+  }
+
+  /* Containers within sections */
+  /* We want content to be inside the section's 20px padding.
+     If a container has a max-width, it should still respect that,
+     but align within the parent's padding. */
+  .about-section .container,
+  .story-section .container {
+    max-width: 100%; /* Allows it to expand to parent width, respecting parent padding */
+    padding: 0; /* Remove any padding from the container itself, let section handle it */
+  }
+
+  /* About Intro */
+  .about-intro {
+    margin-bottom: 40px;
+  }
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+  .about-intro p {
+    font-size: 1rem;
+    padding: 0; /* Remove explicit padding, it's contained by .container or .about-section */
+    max-width: 100%;
+  }
+
+  /* About Cards - stack vertically */
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0; /* Remove padding here, section padding is sufficient */
+  }
+
+  .card {
+    padding: 25px; /* Padding inside each card content */
+  }
+
+  /* Story Cards - center layout */
+  .story-cards {
+    flex-direction: column;
+    align-items: center; /* Centers cards horizontally */
+    gap: 20px;
+  }
+
+  .story-card {
+    width: 100%; /* Make story cards take full width *within the section's padding* */
+    max-width: 350px; /* Keep a max-width for aesthetic on larger phones */
+    height: auto;
+    padding-bottom: 15px;
+  }
+
+  .story-card h4 {
+    padding: 10px;
+    min-height: unset;
+  }
+
+  /* Popup: stack video and text vertically */
+  .story-popup-content {
+    flex-direction: column;
+    height: auto;
+    max-height: 95vh;
+    width: calc(
+      100% - 40px
+    ); /* Calculate width: 100% of viewport minus 20px on each side */
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 0; /* No internal padding on the content wrapper, children handle it */
+    margin: 20px; /* Add margin to the popup content itself to ensure space from edges */
+  }
+
+  /* Video Area & Text Area - apply padding inside */
+  .video-area {
+    padding: 15px; /* Uniform padding on all sides for content within video area */
+    width: 100%; /* Ensures it fills its parent's content box */
+    flex: none;
+  }
+
+  .video-area video {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .video-speed {
+    text-align: center;
+    margin-top: 10px;
+    padding: 0; /* No extra padding here, video-area handles it */
+  }
+
+  .story-text {
+    padding: 15px; /* Uniform padding on all sides for content within text area */
+    width: 100%; /* Ensures it fills its parent's content box */
+    flex: none;
+  }
+
+  .story-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* Close button: Adjust position for mobile */
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* services section */
+.services-section {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+/* Grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card base */
+.service-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Image section */
+.card-image {
+  position: relative;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+}
+
+/* Card title */
+.card-image h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Arrow button */
+.toggle-btn {
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown content */
+.card-content {
+  display: none;
+  padding: 20px;
+  background: #f5faff;
+  border-top: 1px solid #ddd;
+  animation: dropdown 0.3s ease forwards;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* List styling */
+.card-content ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.card-content li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* ===== Join Us Section ===== */
+.join-us-section {
+  padding: 100px 5%;
+  background: #f9f9f9;
+  border-radius: 20px;
+}
+
+/* Section Title */
+.section-title,
+.join-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Intro Text */
+.intro-text,
+.join-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* Subtitle */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #0073e6;
+}
+
+/* ===== Story Cards for How We Help ===== */
+.story-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.story-card {
+  width: 280px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.story-card h4 {
+  padding: 15px 10px 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Know More Button */
+.know-more-btn {
+  margin-top: 10px;
+  padding: 10px 22px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.know-more-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* ===== CV Submission Layout ===== */
+.join-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 50px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side: Image */
+.join-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.join-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Form */
+.join-form-area {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Form styling */
+.cv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cv-form input,
+.cv-form textarea {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  resize: none;
+}
+
+.cv-form textarea {
+  min-height: 100px;
+}
+
+.cv-form input:focus,
+.cv-form textarea:focus {
+  outline: 2px solid #0073e6;
+}
+
+/* Title above upload area */
+.file-upload-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #222;
+}
+
+/* Wrapper spacing */
+.file-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Group holds label + file name inline */
+.file-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.file-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.choose-file-btn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-file-btn:hover {
+  background-color: #005bb5;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #d00;
+  cursor: pointer;
+  line-height: 1;
+  margin-left: 4px;
+  display: none; /* hide by default */
+}
+
+/* Hide real file input */
+#cvUpload {
+  display: none;
+}
+
+/* File name beside button */
+.file-name {
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Submit Button */
+.cv-form .submit-btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cv-form .submit-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+.success-message {
+  font-size: 1.1rem;
+  color: #28a745;
+  background: #e6ffed;
+  border: 1px solid #b6f1c2;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .join-layout {
+    flex-direction: column;
+  }
+
+  .join-image {
+    max-width: 100%;
+  }
+
+  .join-image img {
+    max-height: 300px;
+  }
+}
+
+/* ========== EVENT SECTION ========== */
+.event-section.container {
+  padding: 100px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Heading */
+.event-heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.event-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.event-tab {
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  background: white;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.event-tab.active,
+.event-tab:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Gallery */
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.event-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.event-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.modal-desc {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Modal controls */
+.modal-close,
+.modal-prev,
+.modal-next {
+  position: fixed;
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  transition: transform 0.3s;
+  z-index: 10000;
+}
+
+.modal-close {
+  top: 20px;
+  right: 30px;
+}
+
+.modal-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-close:hover,
+.modal-prev:hover,
+.modal-next:hover {
+  transform: scale(1.2);
+}
+
+/* Contact */
+
+.contact-us-section {
+  padding: 100px 0 120px 0;
+  background-color: #fff;
+}
+
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Form Left */
+.contact-form-area {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 40px;
+  min-width: 300px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Image Right */
+.contact-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Elements */
+.cv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cv-form input,
+.cv-form textarea,
+.cv-form select {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  resize: none;
+}
+
+.cv-form textarea {
+  min-height: 100px;
+}
+
+.cv-form input:focus,
+.cv-form textarea:focus,
+.cv-form select:focus {
+  outline: 2px solid #0073e6;
+}
+
+.file-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Category Group for "Other" input */
+.category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Submit Button */
+.cv-form .submit-btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cv-form .submit-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    max-width: 100%;
+  }
+
+  .contact-image img {
+    max-height: 300px;
+  }
+
+  .contact-form-area {
+    max-width: 100%;
+  }
+}
+
+/* ===== FOOTER STYLES ===== */
+.site-footer {
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 40px 5% 30px;
+  font-family: "Poppins", sans-serif;
+  border-top: 2px solid #e0e0e0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Left column - Info */
+.footer-info {
+  flex: 1 1 300px;
+  min-width: 300px;
+}
+
+.footer-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #0073e6;
+}
+
+.footer-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.footer-info a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+/* Right column - Map */
+.footer-map {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+/* ===== ICON ROW ===== */
+.footer-icons {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  margin-top: 16px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.icon-circle:hover {
+  transform: scale(1.1);
+}
+
+.icon-circle img {
+  width: 34px;
+  height: 34px;
+}
+
+/* Bottom Row */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-icons {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .icon-circle {
+    width: 52px;
+    height: 52px;
+    padding: 10px;
+  }
+
+  .icon-circle img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .footer-info p {
+    font-size: 0.95rem;
+  }
+}

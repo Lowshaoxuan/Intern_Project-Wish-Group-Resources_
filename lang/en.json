@@ -1,0 +1,146 @@
+{
+  "page_title": "Wish Group",
+  "nav_about": "About Us",
+  "nav_services": "Services",
+  "nav_join": "Join Us",
+  "nav_events": "Events",
+  "nav_contact": "Contact Us",
+  "hero": {
+    "title": "Your One-Stop Financial Partner",
+    "subtitle": "All-in-one solution for growth and protection under one roof",
+    "getStarted": "Get Started"
+  },
+  "about": {
+    "title": "About Us",
+    "intro_text": "Founded in 2013, Wish Group Resources combines over 20 years of expertise and has helped thousands of clients invest with confidence, protect their wealth, and pass it on smoothly — all with one trusted partner.",
+    "mission_title": "Our Mission",
+    "mission_text": "To provide peace of mind through comprehensive, personalized financial and insurance planning, build long-term trust with clients, and uphold the highest levels of professionalism and ethical standards.",
+    "vision_title": "Our Vision",
+    "vision_text": "To be a leading young financial services agency in Malaysia — the preferred partner for both clients and business leaders. We train leaders, not staff.",
+    "values_title": "Our Core Values",
+    "value1": "Gratefulness",
+    "value2": "Team Spirit",
+    "value3": "Excellence",
+    "value4": "Foresight",
+    "value5": "Dedication"
+  },
+  "stories": {
+        "title": "Client Success Stories",
+        "story1_title": "Helping Mr. Lee Retire Early",
+        "story1": {
+            "text": "<h3>Helping Mr. Lee Retire Early</h3><p>Mr. Lee approached us at age 45 with a dream to retire by 55. Through strategic investment and financial planning, we helped him achieve early retirement, debt-free and with a stable passive income.</p>"
+        },
+        "story2_title": "Rescuing a Family’s Investment Plan",
+        "story2": {
+            "text": "<h3>Rescuing a Family’s Investment Plan</h3><p>This family was trapped in a high-risk scheme. Our advisors helped them exit and restructure their portfolio, resulting in stable growth and financial peace of mind.</p>"
+        },
+        "story3_title": "Building a Safe Future for Kids",
+        "story3": {
+            "text": "<h3>Building a Safe Future for Kids</h3><p>We helped this young couple set up a long-term savings and protection plan, ensuring education and healthcare for their children, even during economic uncertainty.</p>"
+        },
+        "know_more": "Know More"
+    },
+  "story_popup": {
+        "video_unsupported": "Your browser does not support the video tag.",
+        "speed_label": "Speed:"
+  },
+  "services": {
+    "title": "Our Services",
+    "banking": {
+      "title": "Banking & Finance",
+      "item1": "Loan consultation",
+      "item2": "Mortgage planning",
+      "item3": "Debt restructuring"
+    },
+    "risk": {
+      "title": "Risk Management",
+      "item1": "Insurance analysis",
+      "item2": "Protection planning",
+      "item3": "Critical illness coverage"
+    },
+    "legal": {
+      "title": "Legal Advisory(via trusted partners)",
+      "item1": "Legal documentation support",
+      "item2": "Contract review",
+      "item3": "Will writing"
+    },
+    "tax": {
+      "title": "Tax Planning",
+      "item1": "Personal tax planning",
+      "item2": "Business tax consultation",
+      "item3": "Tax optimization"
+    },
+    "investment": {
+      "title": "Investment Planning",
+      "item1": "Portfolio design",
+      "item2": "Unit trust investment",
+      "item3": "Retirement planning"
+    },
+    "estate": {
+      "title": "Estate Planning",
+      "item1": "Will planning & trust setup",
+      "item2": "Asset distribution",
+      "item3": "Inheritance protection"
+    }
+  },
+  "join": {
+    "title": "Join Us",
+    "intro_text": "<strong>Flexible work hours. Income in your hands.</strong><br />Join our team as a “Wealth Artisan” — learn the essential paths of tax, finance, risk, wealth and estate planning.",
+    "how_we_help_title": "How We Help",
+    "story4_title": "Guiding Young Advisors",
+    "story5_title": "Financial Freedom for Moms",
+    "story6_title": "Second Career for Retirees",
+    "apply_title": "Join Us Now",
+    "apply_description": "We’re looking for passionate individuals like you!"
+  },
+  "form": {
+    "name_placeholder": "Your Name",
+    "email_placeholder": "Your Email",
+    "phone_placeholder": "Phone Number",
+    "message_placeholder_cv": "Any message to our company",
+    "cv_label": "Attach your CV here",
+    "choose_file_btn": "Choose a File",
+    "no_file_chosen": "No file chosen",
+    "remove_file_title": "Remove File",
+    "submit_btn": "Submit",
+    "message_placeholder_contact": "Optional Message"
+  },
+  "events": {
+    "title": "Our Events",
+    "tab_team": "Team Building",
+    "tab_training": "Training",
+    "tab_celebration": "Celebration",
+    "team_desc1": "Outdoor team bonding activities.",
+    "team_desc2": "Fun collaboration with games.",
+    "training_desc1": "Leadership workshop and finance training.",
+    "celebration_desc1": "Company's annual dinner and party."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Leave us your details and we'll be in touch!",
+    "form_title": "Get In Touch",
+    "category_label": "Interested Category",
+    "category_option1": "Banking Solutions",
+    "category_option2": "Risk Management",
+    "category_option3": "Legal Advisory",
+    "category_option4": "Tax Planning",
+    "category_option5": "Investment Planning",
+    "category_option6": "Estate Planning",
+    "category_option_other": "Other",
+    "other_category_placeholder": "Please specify"
+  },
+  "footer": {
+    "find_us_title": "Find Us On",
+    "address_label": "Address:",
+    "address_line1": "32A-1, Jalan Nautika B U20/B,",
+    "address_line2": "Pusat Komersial TSB,",
+    "address_line3": "47000 Shah Alam, Selangor",
+    "Maps_title": "Open in Google Maps",
+    "waze_title": "Open in Waze",
+    "facebook_title": "Facebook",
+    "rednote_title": "Rednote",
+    "email_label": "Email:",
+    "phone_label": "Phone:",
+    "copyright": "© 2025 Wish Group. All rights reserved."
+  }
+}
